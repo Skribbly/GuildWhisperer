@@ -1,0 +1,9 @@
+## Interface: 60000
+## Title: Guild Whisperer
+## Version: 1.0
+## Notes: My super secret addon
+## Author: Skribbles
+## DefaultState: enabled
+## SavedVariables: gwhisper_enabled
+
+GuildWhisperer.lua
