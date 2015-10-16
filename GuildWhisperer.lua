@@ -3,8 +3,11 @@ SLASH_ENABLEGWHISPER1 = '/gwhisper'
 local f = CreateFrame("Frame");
 local function myEvent(event, ...)
 	if gwhisper_enabled == 1 then
-		DEFAULT_CHAT_FRAME:AddMessage("Inviting |cFFFF0000"..arg2.."|r to guild")
-		GuildInviteByName(arg2)
+		message = arg1
+		if string.find(message, "Herald") or string.find(message, "herald") then 
+			DEFAULT_CHAT_FRAME:AddMessage("Inviting |cFFFF0000"..arg2.."|r to guild")
+			GuildInviteByName(arg2)
+		end
 	end
 end
 
