@@ -4,7 +4,7 @@ local f = CreateFrame("Frame");
 local function myEvent(event, ...)
 	if gwhisper_enabled == 1 then
 		message = arg1
-		if string.find(message, "Herald") or string.find(message, "herald") then 
+		if string.find(message, "Herald") or string.find(message, "herald") or string.find(message, "Heralds") or string.find(message, "heralds") then 
 			DEFAULT_CHAT_FRAME:AddMessage("Inviting |cFFFF0000"..arg2.."|r to guild")
 			GuildInviteByName(arg2)
 		end
@@ -13,7 +13,7 @@ end
 
 f:RegisterEvent("CHAT_MSG_WHISPER")
 f:SetScript("OnEvent", myEvent)
-
+ 
 local function handler(msg, editbox)
 	if msg == 'on' then
 		DEFAULT_CHAT_FRAME:AddMessage("Guild Invite on Whisper is now |cFFFF0000ON")
